@@ -34,13 +34,37 @@ public class ManagerTest {
     }
 
     @Test
+    public void canRaiseSalary__negative(){
+        manager.raiseSalary(-1000);
+        assertEquals(16000, manager.getSalary(), 0.01);
+    }
+
+    @Test
     public void canPayBonus(){
         assertEquals(160, manager.payBonus());
     }
 
     @Test
-    public void getDeptName(){
+    public void canGetDeptName(){
         assertEquals("Training", manager.getDeptName());
+    }
+
+    @Test
+    public void canSetName(){
+        manager.setName("John Smith");
+        assertEquals("John Smith", manager.getName());
+    }
+
+    @Test
+    public void canSetName__NULL(){
+        manager.setName(null);
+        assertEquals("Joe Bloggs", manager.getName());
+    }
+
+    @Test
+    public void canSetName__EmptyString(){
+        manager.setName("");
+        assertEquals("Joe Bloggs", manager.getName());
     }
 
 }

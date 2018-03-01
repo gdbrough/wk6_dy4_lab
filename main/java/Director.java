@@ -10,4 +10,9 @@ public class Director extends Manager {
     public Double getBudget() {
         return budget;
     }
+    
+    public int payBonus(){
+        int bonus = getSalary() / 50;
+        return bonus;
+    }
 }

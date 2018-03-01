@@ -25,13 +25,21 @@ public class Employee {
     }
 
     public void raiseSalary(double increase){
-        Double oldSalary = (double) getSalary();
-        Double newSalary = oldSalary + increase;
-        this.salary  = (int) round(newSalary);
+        if (increase > 0) {
+            Double oldSalary = (double) getSalary();
+            Double newSalary = oldSalary + increase;
+            this.salary = (int) round(newSalary);
+        }
     }
 
     public int payBonus(){
         int bonus = getSalary() / 100;
         return bonus;
+    }
+
+    public void setName(String name) {
+        if ((name != null) && (name != "")) {
+            this.name = name;
+        }
     }
 }
