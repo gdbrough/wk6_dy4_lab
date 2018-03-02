@@ -1,6 +1,6 @@
 import static java.lang.Math.*;
 
-public class Employee {
+public abstract class Employee {
 
     public String name;
     public String niNumber;
